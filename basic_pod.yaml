@@ -1,0 +1,13 @@
+apiversion: v1
+kind: Pod 
+metadata:
+  name: mayur-app
+  labels:
+      my-app
+spec:
+  containers:
+   - name: con-1
+     image: httpd:latest
+     ports: 
+      - name: http
+        containerPort: 80
