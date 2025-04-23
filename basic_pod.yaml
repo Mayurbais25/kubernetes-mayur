@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: mayur-app
   labels:
-      my-app
+      mayur-app
 spec:
   containers:
    - name: con-1
