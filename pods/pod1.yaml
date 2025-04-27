@@ -1,12 +1,12 @@
 apiversion: v1
 kind: Pod
 metadata:
-  name: my-first-pod
+  name: my-app
   Labels: 
-   app: amazon 
+   app: my-app 
 spec:
   containers:
-    - name: con-1
+    - name: my-container
       image: httpd:latest
       ports:
         - name: http
