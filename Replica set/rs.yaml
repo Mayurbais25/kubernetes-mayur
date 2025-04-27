@@ -1,0 +1,20 @@
+apiversion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-rs
+  namespace: dev
+  Labels:
+    app: my_new_rs
+spec:
+  template:
+    Containers:
+      - name: my-cont
+        image: httpd:latest
+        ports: 
+          - name: http
+            containerPort: 80
+  selector:
+    matchLabels:
+      app: my_new_rs
+  
+  replicas: 5

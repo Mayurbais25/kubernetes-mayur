@@ -1,0 +1,22 @@
+apiversion: vi
+kind: ReplicationController
+metadata:
+  name: my-rc
+  namespace: dev
+  Labels:
+    name: my-app
+spec:
+  template:
+  meta:
+    Labels:
+      app: my-app
+  spec:
+    containers:
+      - name: my-container
+        image: httpd:latest
+        ports:
+        - name: http
+          container: 80
+  selector: 
+    app: my-app
+  replicas: 5
