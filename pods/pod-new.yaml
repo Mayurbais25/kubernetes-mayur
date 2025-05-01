@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Pod
-metadata:
-  name: my-app
-  labels: 
-   app: my-app 
+metadata: 
+  name: mayur-pod 
+  labels:
+    app: my-app
+  namespace: devops
 spec:
   containers:
-    - name: my-container
+    - name: httpd
       image: httpd:latest
       ports:
         - name: http
